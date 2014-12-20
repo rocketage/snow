@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Boilerplate</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="jquery.snow.js"></script>
+		<style type="text/css">
+			.snowflake {
+				-webkit-animation:spin 4s linear infinite;
+				-moz-animation:spin 4s linear infinite;
+				animation:spin 4s linear infinite;
+			}
+			@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+			@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+			@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+		</style>
+	</head>
+	<body style="background-color: #000;">
+		<div id="main"></div>
+		<script>
+			jQuery(function() {
+				jQuery("#main").snow({
+					intensity: 40,
+					sizeRange: [12, 30],
+					opacityRange: [0.4, 1],
+					driftRange: [10, 20],
+					speedRange: [55, 120]
+				});
+			});
+		</script>
+	</body>
+</html>
